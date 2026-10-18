@@ -1,0 +1,13 @@
+## Interface: 30300
+## Title: IPTalents
+## Notes: Era-authentic talent panel adapted for Exile WoW
+## Author: Lewis Thrasher; Exile WoW adaptation
+## Version: 0.1
+data\generated\MageVanilla.lua
+data\generated\MageVanillaRu.lua
+IPTalents.lua
+Comms.lua
+Tooltip.lua
+TalentUI.lua
+Hook.lua
+Inspect.lua
