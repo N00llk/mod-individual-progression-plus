@@ -1,0 +1,5 @@
+out/
+base/
+mpqpack
+mpqread
+.gitignore
