@@ -53,6 +53,10 @@ void AddSC_npc_archmage_timear();
 void AddSC_karazhan_70();
 void AddSC_the_eye_70();
 void AddSC_serpentshrine_cavern_70();
+void AddSC_individualProgressionTalentDataDriven();
+void AddSC_individualProgression_mage_vanilla_talents();
+void AddSC_individualProgression_talent();
+void AddSC_individualProgression_talent_protocol();
 
 void Addmod_individual_progressionScripts()
 {
@@ -106,4 +110,8 @@ void Addmod_individual_progressionScripts()
     AddSC_karazhan_70();
     AddSC_the_eye_70();
     AddSC_serpentshrine_cavern_70();
+    AddSC_individualProgressionTalentDataDriven();
+    AddSC_individualProgression_mage_vanilla_talents();
+    AddSC_individualProgression_talent();
+    AddSC_individualProgression_talent_protocol();
 }

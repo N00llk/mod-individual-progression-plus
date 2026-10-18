@@ -5,6 +5,7 @@
 #include "IndividualProgression.h"
 #include "naxxramas_40.h"
 #include "ReputationMgr.h"
+#include "IndividualProgressionTalent.h"
 
 IndividualProgression* IndividualProgression::instance()
 {
@@ -69,15 +70,13 @@ void IndividualProgression::UpdateProgressionState(Player* player, ProgressionSt
             player->CompleteQuest(PROGRESSION_QUEST);
             player->RewardQuest(quest, 0, player, false, false);
         }
+        IndividualProgressionTalent::Reconcile(player);
     }
 }
 
 void IndividualProgression::ForceUpdateProgressionState(Player* player, ProgressionState newState)
 {
     if (!player || !player->IsInWorld())
-        return;
-
-    if (!newState)
         return;
 
     // remove all hidden progression quests first
@@ -100,6 +99,7 @@ void IndividualProgression::ForceUpdateProgressionState(Player* player, Progress
         player->CompleteQuest(PROGRESSION_QUEST);
         player->RewardQuest(quest, 0, player, false, false);
     }
+    IndividualProgressionTalent::Reconcile(player);
 }
 
 void IndividualProgression::CheckAdjustments(Player* player) const

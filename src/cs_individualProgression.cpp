@@ -2,17 +2,73 @@
 #include "ScriptMgr.h"
 #include "Tokenize.h"
 #include "IndividualProgression.h"
+#include "IndividualProgressionTalent.h"
 #include "naxxramas_40.h"
 
 using namespace Acore::ChatCommands;
+
+namespace
+{
+constexpr uint32 IMPROVED_ARCANE_MISSILES = 928002;
+}
 
 class individualProgression_commandscript : public CommandScript
 {
 public:
     individualProgression_commandscript() : CommandScript("individualProgression_commandscript") {}
 
+    static bool HandleTalentLearnCommand(ChatHandler* handler)
+    {
+        Player* player = handler->GetSession()->GetPlayer();
+        std::string error;
+        if (!IndividualProgressionTalent::LearnNextRank(
+                player, IMPROVED_ARCANE_MISSILES, error))
+        {
+            handler->PSendSysMessage("Talent learn failed: {}", error);
+            return false;
+        }
+
+        handler->PSendSysMessage(
+            "Learned Improved Arcane Missiles rank {}.",
+            IndividualProgressionTalent::GetRank(
+                player, IMPROVED_ARCANE_MISSILES));
+        return true;
+    }
+
+    static bool HandleTalentResetCommand(ChatHandler* handler)
+    {
+        Player* player = handler->GetSession()->GetPlayer();
+        if (!IndividualProgressionTalent::Reset(
+                player, IMPROVED_ARCANE_MISSILES))
+        {
+            handler->SendSysMessage(
+                "Could not reset the talent: server spell data is "
+                "unavailable.");
+            return false;
+        }
+
+        handler->SendSysMessage("Reset Improved Arcane Missiles.");
+        return true;
+    }
+
+    static bool HandleTalentStatusCommand(ChatHandler* handler)
+    {
+        Player* player = handler->GetSession()->GetPlayer();
+        handler->PSendSysMessage("Improved Arcane Missiles rank: {}",
+            IndividualProgressionTalent::GetRank(
+                player, IMPROVED_ARCANE_MISSILES));
+        return true;
+    }
+
     ChatCommandTable GetCommands() const override
     {
+        static ChatCommandTable talentTable =
+        {
+            { "learn", HandleTalentLearnCommand, SEC_GAMEMASTER, Console::No },
+            { "reset", HandleTalentResetCommand, SEC_GAMEMASTER, Console::No },
+            { "status", HandleTalentStatusCommand, SEC_GAMEMASTER, Console::No },
+        };
+
         static ChatCommandTable ipTable =
         {
             { "get",    HandleGetIndividualProgressionCommand,    SEC_GAMEMASTER,    Console::Yes },
@@ -22,6 +78,7 @@ public:
             { "setrep", HandleSetRepIndividualProgressionCommand, SEC_GAMEMASTER,    Console::Yes },
             { "pvp",    HandlePVPIndividualProgressionCommand,    SEC_GAMEMASTER,    Console::Yes },
             { "attune", HandleAttuneIndividualProgressionCommand, SEC_GAMEMASTER,    Console::Yes },
+            { "talent", talentTable },
         };
 
         static ChatCommandTable commandTable =
