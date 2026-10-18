@@ -413,78 +413,91 @@ texts:
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 1
   spell.pyroblast_rank_2:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 2
   spell.pyroblast_rank_3:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 3
   spell.pyroblast_rank_4:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 4
   spell.pyroblast_rank_5:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 5
   spell.pyroblast_rank_6:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 6
   spell.pyroblast_rank_7:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 7
   spell.pyroblast_rank_8:
     name: Pyroblast
     description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire
       damage over $d.
     auraDescription: $s2 Fire damage every $t2 seconds.
     serverName: Pyroblast
+    nameSubtext: Rank 8
   spell.blast_wave_rank_1:
     name: Blast Wave
     description: A wave of flame radiates outward from the caster, damaging all enemies caught within
       the blast for $s1 Fire damage, dazing them for $d.
     auraDescription: Dazed.
     serverName: Blast Wave
+    nameSubtext: Rank 1
   spell.blast_wave_rank_2:
     name: Blast Wave
     description: A wave of flame radiates outward from the caster, damaging all enemies caught within
       the blast for $s1 Fire damage, dazing them for $d.
     auraDescription: Dazed.
     serverName: Blast Wave
+    nameSubtext: Rank 2
   spell.blast_wave_rank_3:
     name: Blast Wave
     description: A wave of flame radiates outward from the caster, damaging all enemies caught within
       the blast for $s1 Fire damage, dazing them for $d.
     auraDescription: Dazed.
     serverName: Blast Wave
+    nameSubtext: Rank 3
   spell.blast_wave_rank_4:
     name: Blast Wave
     description: A wave of flame radiates outward from the caster, damaging all enemies caught within
       the blast for $s1 Fire damage, dazing them for $d.
     auraDescription: Dazed.
     serverName: Blast Wave
+    nameSubtext: Rank 4
   spell.blast_wave_rank_5:
     name: Blast Wave
     description: A wave of flame radiates outward from the caster, damaging all enemies caught within
       the blast for $s1 Fire damage, dazing them for $d.
     auraDescription: Dazed.
     serverName: Blast Wave
+    nameSubtext: Rank 5
   spell.combustion:
     name: Combustion
     description: When activated, this spell causes each of your Fire damage spell hits to increase your
@@ -503,24 +516,28 @@ texts:
       will not be delayed by damage.
     auraDescription: Absorbs damage.
     serverName: Ice Barrier
+    nameSubtext: Rank 1
   spell.ice_barrier_rank_2:
     name: Ice Barrier
     description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting
       will not be delayed by damage.
     auraDescription: Absorbs damage.
     serverName: Ice Barrier
+    nameSubtext: Rank 2
   spell.ice_barrier_rank_3:
     name: Ice Barrier
     description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting
       will not be delayed by damage.
     auraDescription: Absorbs damage.
     serverName: Ice Barrier
+    nameSubtext: Rank 3
   spell.ice_barrier_rank_4:
     name: Ice Barrier
     description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting
       will not be delayed by damage.
     auraDescription: Absorbs damage.
     serverName: Ice Barrier
+    nameSubtext: Rank 4
   spell.cold_snap:
     name: Cold Snap
     description: When activated, this spell finishes the cooldown on all of your Frost spells.
