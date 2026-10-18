@@ -1,0 +1,18 @@
+schemaVersion: 1
+base: 920000
+eraStride: 100000
+classStride: 1000
+relativeIdLimit: 1000
+eras:
+  vanilla: 0
+  tbc: 1
+classes:
+  warrior: 1
+  paladin: 2
+  hunter: 3
+  rogue: 4
+  priest: 5
+  shaman: 7
+  mage: 8
+  warlock: 9
+  druid: 11
